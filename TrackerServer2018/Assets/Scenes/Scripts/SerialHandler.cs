@@ -16,20 +16,10 @@ public class SerialHandler : MonoBehaviour
     private bool isRunning_ = false;
 
     private string message_;
-    private bool isNewMessageReceived_ = false;
 
     void Awake()
     {
         Open();
-    }
-
-    void Update()
-    {
-        if (isNewMessageReceived_)
-        {
-            OnDataReceived(message_);
-        }
-        isNewMessageReceived_ = false;
     }
 
     void OnDestroy()
@@ -51,7 +41,6 @@ public class SerialHandler : MonoBehaviour
 
     private void Close()
     {
-        isNewMessageReceived_ = false;
         isRunning_ = false;
 
         if (thread_ != null && thread_.IsAlive)
@@ -73,7 +62,7 @@ public class SerialHandler : MonoBehaviour
             try
             {
                 message_ = serialPort_.ReadLine();
-                isNewMessageReceived_ = true;
+                OnDataReceived(message_);
             }
             catch (System.Exception e)
             {

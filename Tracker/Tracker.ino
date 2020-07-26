@@ -1,27 +1,32 @@
-#include "sensor.h"
+#include "sensors.h"
 #include "network.h"
 
-#define LSM9DS1_M 0x1E
-#define LSM9DS1_AG 0x6B
-#define  SDA1_PIN  21
-#define  SCL1_PIN  22
+#define  SDA1_PIN  26
+#define  SCL1_PIN  32
+#define  BUTTON_PIN  39
 #define DEVICE_NAME "Tracker"
 
-Sensor sensor;
+//#define DEBUG
+
+Sensors sensors;
 Network network;
 
 void setup()
 {
+  #ifdef DEBUG
   Serial.begin(115200);
-  sensor.begin(LSM9DS1_AG, LSM9DS1_M, SDA1_PIN, SCL1_PIN);
+  #endif
+  sensors.begin(SDA1_PIN, SCL1_PIN);
   network.begin(DEVICE_NAME);
+  pinMode(BUTTON_PIN, INPUT);
 }
-
 
 void loop()
 {
-  SensorData data = sensor.getData();
-  String str = data.toString();
+  SensorsData data = sensors.getData();
+  String str = String(millis()) + " " + String(digitalRead(BUTTON_PIN)) + " " + data.toString();
+  #ifdef DEBUG
   Serial.println(str);
+  #endif
   network.send(str);
 }

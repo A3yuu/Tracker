@@ -11,6 +11,6 @@ class Sensor{
   SensorData data;
   uint16_t connectionState = 0;
   public:
-  void begin();
+  void begin(uint8_t sdaPin, uint8_t sclPin);
   SensorData getData();
 };

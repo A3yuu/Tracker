@@ -63,23 +63,31 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scenes\ObjectTest.cs" />
-    <Compile Include="Assets\Scenes\Sensor.cs" />
-    <Compile Include="Assets\Scenes\SerialHandler.cs" />
+    <Compile Include="Assets\Scenes\Scripts\AxlTest.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Bone\Bone.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Bone\Neck.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Bone\Spine.cs" />
+    <Compile Include="Assets\Scenes\Scripts\CalibStart.cs" />
+    <Compile Include="Assets\Scenes\Scripts\MagCalib.cs" />
+    <Compile Include="Assets\Scenes\Scripts\MagTest.cs" />
+    <Compile Include="Assets\Scenes\Scripts\ObjectTest.cs" />
+    <Compile Include="Assets\Scenes\Scripts\SaveTransform.cs" />
+    <Compile Include="Assets\Scenes\Scripts\Sensor.cs" />
+    <Compile Include="Assets\Scenes\Scripts\SerialHandler.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/A3/Desktop/フルトラ自作/TrackerServer2018/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/A3/Desktop/フルトラ自作/Repository/TrackerServer2018/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Users/A3/Desktop/フルトラ自作/TrackerServer2018/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>C:/Users/A3/Desktop/フルトラ自作/Repository/TrackerServer2018/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/A3/Desktop/フルトラ自作/TrackerServer2018/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/A3/Desktop/フルトラ自作/Repository/TrackerServer2018/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/A3/Desktop/フルトラ自作/TrackerServer2018/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/A3/Desktop/フルトラ自作/Repository/TrackerServer2018/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>C:/Users/A3/Desktop/フルトラ自作/TrackerServer2018/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+      <HintPath>C:/Users/A3/Desktop/フルトラ自作/Repository/TrackerServer2018/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.4.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -283,7 +291,7 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.4.20f1/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>C:/Users/A3/Desktop/フルトラ自作/TrackerServer2018/Library/PackageCache/com.unity.analytics@3.2.3/AnalyticsStandardEvents/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/A3/Desktop/フルトラ自作/Repository/TrackerServer2018/Library/PackageCache/com.unity.analytics@3.2.3/AnalyticsStandardEvents/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.4.20f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>

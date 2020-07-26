@@ -1,5 +1,8 @@
+#include <BluetoothSerial.h>
 #include "network.h"
 
+  BluetoothSerial SerialBT;
+  
   void Network::begin(String name){
     SerialBT.begin(name);
   }

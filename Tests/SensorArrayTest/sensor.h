@@ -8,8 +8,6 @@ class SensorData{
 };
 
 class Sensor{
-  SensorData data;
-  uint16_t connectionState = 0;
   public:
   void begin();
   SensorData getData();
