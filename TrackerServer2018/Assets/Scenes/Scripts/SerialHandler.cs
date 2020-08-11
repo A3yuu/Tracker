@@ -2,12 +2,14 @@
 using System.Collections;
 using System.IO.Ports;
 using System.Threading;
+using System;
 
 public class SerialHandler : MonoBehaviour
 {
     public delegate void SerialDataReceivedEventHandler(string message);
     public event SerialDataReceivedEventHandler OnDataReceived;
 
+    String saveKeysCOM = "COMNUM";
     public string portName = "COM1";
     public int baudRate = 9600;
 
@@ -29,6 +31,7 @@ public class SerialHandler : MonoBehaviour
 
     private void Open()
     {
+        portName = PlayerPrefs.GetString(saveKeysCOM);
         serialPort_ = new SerialPort(portName, baudRate, Parity.None, 8, StopBits.One);
         serialPort_.ReadTimeout = 1000;
         serialPort_.Open();

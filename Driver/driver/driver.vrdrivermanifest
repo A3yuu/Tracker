@@ -1,0 +1,10 @@
+{
+	"alwaysActivate": true,
+	"name" : "A3Tracker",
+	"redirectsDisplay": true,
+
+	"hmd_presence" :
+	[
+		"*.*"
+	]
+}
